@@ -1,0 +1,250 @@
+html , #root {
+    background-color: black;
+    color:white;
+
+    /* font-family: 'Open Sans', sans-serif; */
+
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+#fixed {
+    position: fixed;
+    background-color: #11ffea;
+    bottom: 100px;
+    right: 10px;
+    padding: 40px;
+    margin: 0;
+    text-align: center;
+    clip-path: polygon(50% 30%, 100% 10%, 100% 60%, 50% 80%, 0% 60%, 0 10%);
+  }
+
+#mainpic {
+    float: left;
+    padding: 0 20px;
+    /* clip-path: circle(40% at 50% 40%); */
+    clip-path: ellipse(35% 40% at 50% 50%);
+}
+
+.h1div {
+    text-align: center;
+    color: #fff;
+}
+
+.innerlabelpicture {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    color: #fff;
+    float: none;
+    width: 100%;
+    height: auto;
+}
+
+.img-fluid {
+    padding: 10px 0;
+}
+
+.innerlabel {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 15px 0;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    text-align: center;
+}
+
+.navbar {
+    clip-path:polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    margin: 0;
+    
+    transition: all 1.5s;
+}
+
+.nav-wrapper {
+/* border-bottom: solid 1px #11ffea; */
+
+filter: drop-shadow( 0px 5px 10px #11ffea);
+}
+
+
+@media screen and (max-width: 768px) {
+    /* The body's bg color will be #333 */
+    /* The wrapper's width will be 600px */
+    .wrapper {
+        width: 600px;
+    }
+    .bg-light {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #mainpic {
+        width: device-width;
+        padding: 0 20;
+    }
+    .portfolioPhoto {
+        height: auto;
+        width: 100%;
+    }
+    .innerlabelpicture {
+        width: 100%;
+    }
+}
+
+/* letter font color 11ffea  */
+
+.nav-link {
+    color: #11ffea;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+ .nav-link:before {
+    content: " ";
+    position: absolute;
+    background-color: #11ffea;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+ 
+}
+.nav-link:hover {
+    content: "";
+    color: #9dfafe;
+}
+
+.nav-link:hover:before, .nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #9dfafe;
+}
+
+.footerIcon {
+    color:#11ffea;
+    font-size:60px;
+    /* padding-top :0.3rem; */
+    transition: all 0.5s;
+}
+
+.footerIcon:hover {
+    content: "";
+    color: white;
+    text-shadow: 0 0 15px #9dfafe;
+   
+}
+
+footer {
+    clip-path:polygon( 0 30%, 100% 0, 100% 100%, 0 100%);
+    margin: 0, auto;
+    padding: 2rem 3rem 2rem 4rem;
+    transition: all 1.5s;
+}
+
+.footer-wrapper {
+    position: relative;
+    filter: drop-shadow( 0 -5px 10px #11ffea);
+}
+
+#pictureWrapper {
+    position: relative;
+    filter: drop-shadow( 0 -5px 10px #11ffea);
+}
+  h1 {
+    color:white;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    background: transparent;
+    font-size: 2rem;
+    transition: all 1s;
+  }
+  h1:after, h1:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transition: all 1s;
+  }
+  h1:after {
+    top: -1px;
+    left: -1px;
+    opacity: 0;
+    border-top: 5px solid #9dfafe;
+    border-left: 5px solid #9dfafe;
+  }
+  h1:before {
+    bottom: -1px;
+    right: -1px;
+    opacity: 0;
+    border-bottom: 5px solid #9dfafe;
+    border-right: 5px solid #9dfafe;
+  }
+  h1:hover:before, h1:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  a:hover, a:visited, a:link, a:active {
+    text-decoration: none!important;
+}
+
+h2{
+    color:white;
+    text-shadow: 0 0 15px #9dfafe;
+}
+
+#welcomeBtn{
+    position: absolute;
+    bottom:40px;
+    margin: auto;
+    border-radius: 30px;
+    padding:20px;
+    background-color: black;
+    color:white;
+    border:solid 3px #11ffea;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+
+#welcomeBtn:hover {filter: drop-shadow( 0 -5px 10px #11ffea);}
+
+#welcomeBtn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  #welcomeBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #welcomeBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #welcomeBtn:hover span {
+    padding-right: 25px;
+  }
+  
+  #welcomeBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
